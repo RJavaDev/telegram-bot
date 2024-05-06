@@ -8,10 +8,8 @@ public class MainTelegramBot {
 
     public static void main(String[] args) throws TelegramApiException {
 
-        MyTelegramBotController myTelegramBotController = new MyTelegramBotController();
-
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
 
-        telegramBotsApi.registerBot(myTelegramBotController);
+        telegramBotsApi.registerBot(new MyTelegramBotController());
     }
 }
